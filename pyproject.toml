@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "dvc>=3.66.1",
     "ipykernel>=7.2.0",
     "pandas>=3.0.0",
     "torch>=2.10.0",
@@ -18,5 +19,10 @@ torchvision = { index = "pytorch" }
 torchaudio = { index = "pytorch" }
 
 [[tool.uv.index]]
+url = "https://pypi.org/simple"
+default = true
+
+[[tool.uv.index]]
 name = "pytorch"
 url = "https://download.pytorch.org/whl/cu128"
+explicit = true
