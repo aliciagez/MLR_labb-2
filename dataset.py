@@ -1,5 +1,7 @@
 import torch
 from torchvision import datasets, transforms
+import sys
+print(sys.executable)
 
 
 
