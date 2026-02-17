@@ -1,7 +1,6 @@
 import torch
+from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
-import sys
-print(sys.executable)
 
 
 
@@ -12,3 +11,4 @@ trainset = datasets.CIFAR10(root='./data', train=True, download=True, transform=
 testset = datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
 
 
+# add train test split here
