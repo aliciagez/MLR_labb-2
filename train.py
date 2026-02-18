@@ -9,13 +9,16 @@ epochs = 10
 train_losses = []
 test_losses = []
 
-def traning_loop():
+def traning_loop(model):
     for epoch in range(num_epochs):
+        model.train()
         for inputs, targets in dataloader:
             optimizer.zero_grad()
             outputs = model(inputs)
             loss = criterion(outputs, targets)
             loss.backward()
             optimizer.step()
-        
-    print(f"Epoch [{epoch+1}], Loss: {loss.item():.4f}")
+        return epoch+1, loss 
+    
+    
+print(f"Epoch [{epoch+1}], Loss: {loss.item():.4f}")
