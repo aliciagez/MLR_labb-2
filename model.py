@@ -4,15 +4,12 @@ import torch
 from check_env import device
 
 
-hidden_paramaters = 128
 
-
-def model(hidden_parameters):
+def model(hidden_parameters=128):
     model = nn.Sequential(
         nn.Flatten(),
-        nn.Linear(3072,hidden_paramaters), 
+        nn.Linear(3072,hidden_parameters), 
         nn.ReLU(),
-        nn.Linear(hidden_paramaters,10)).to(device)
-    return model 
+        nn.Linear(hidden_parameters,10))
+    return model.to(device)
 
-my_model = model(hidden_paramaters)

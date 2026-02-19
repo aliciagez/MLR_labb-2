@@ -14,5 +14,9 @@ Model:
 I created a model with paramets as varibels so they can be change when 
 experimenten with the model, bath size, hiddes layes and such. I did a base model in model.py what will be used in the experiment notebook 
 with diffrent hyperparameters. I did a simpel model in order to keep it simpel for myself and i added a flatten function in the model it slef since chatgpt said it was 
-better than doing the flattening in the dataset.py. The amount of data in the cifar-10 is 3 x 32 x 32 = 3072. Meaning
+better than doing the flattening in the dataset.py. The amount of data in the cifar-10 is 3 x 32 x 32 = 3072. I made the model an calleble object so i can use it to experiment. 
+I added hidden layer at 128 as default for the first experiment since according to chatgpt it was a standars numer to start with. 
+
+Train: 
+For the traning i wanted to be able to change the hyperparamets as i experimented so i wanted to make the traning and the, model for that matter, to be calleble functions that can be reused. So i did the optermizes at ciritaions in one functiuon and the rest of the traning loop in anotherl. 
 
