@@ -1,7 +1,10 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from model import model 
+from model import my_model
+
+optimizer = optim.Adam(my_model.parameters(), lr=0.001)
+
 
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
@@ -10,9 +13,9 @@ train_losses = []
 test_losses = []
 
 def traning_loop(model):
-    for epoch in range(num_epochs):
+    for epoch in range(epochs):
         model.train()
-        for inputs, targets in dataloader:
+        for i, data in enumerate(trainloader):
             optimizer.zero_grad()
             outputs = model(inputs)
             loss = criterion(outputs, targets)
