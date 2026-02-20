@@ -26,7 +26,7 @@ def traning_loop(model, trainloader,optimizer, criterion, epochs, device):
             optimizer.step()
             
             running_loss += loss.item()
-            print(f"Epoch [{epoch+1}], Loss: {loss.item():.4f}")
+        print(f"Epoch [{epoch+1}], Loss: {loss.item():.4f}")
     
 
     
